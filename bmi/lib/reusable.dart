@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Resuable extends StatelessWidget {
-  const Resuable({super.key, required this.name, this.icon});
+  const Resuable({super.key,   required this.childcard, this.icon});
   final IconData? icon;
-  final String name;
-  
+
+  final  Widget childcard;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10), color: Colors.green),
-      child:  Text(
-        name, style: const  TextStyle(color:Colors.white),
-      ),
+      child:childcard
     );
   }
 }

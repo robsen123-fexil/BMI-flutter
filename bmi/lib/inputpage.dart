@@ -1,9 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, avoid_print
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, avoid_print, unnecessary_import
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'reusable.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'customeicon.dart';
 
 class Inputpage extends StatelessWidget {
   const Inputpage({
@@ -25,45 +27,50 @@ class Inputpage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              child: Row
+              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: GestureDetector(onTap: () {
 
-              (
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Expanded(
-                  child: GestureDetector(
-                      onTap: () {
-                       
                       },
-                      child: Resuable(name: "male",
-                      
-                      )),
-                ),
-                Expanded(
-                  
-                  child: GestureDetector(
-                      onTap: () {
-                        
-                      },
-                      child: Resuable(name: "female"
-                        
-                      )),
-                ),
-              ]),
+                       child: Resuable(childcard: Customicon(name: "Male", icon: FontAwesomeIcons.mars,),)),
+                    ),
+                    Expanded(
+                      child: GestureDetector(onTap: () {}, child: Resuable(
+                            childcard: Customicon(
+                              name: "Female",
+                              icon:FontAwesomeIcons.venus
+                            ),
+                          )),
+                    ),
+                  ]),
             ),
             Expanded(
-            
-              child: Resuable(name:"height"),
+              child:GestureDetector(
+                  
+                child:Resuable(
+                  childcard: Customicon(name: "height", ) ,
+                  
+                ))
             ),
             Expanded(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Expanded(
-                    child: Resuable(name:"weight"),
+                    child: Resuable(
+                      childcard: Customicon(
+                        name: "Weight",
+                      ),
+                    ),
                   ),
-                  Expanded(child: Resuable(name:"age"))
+                  Expanded(child: Resuable(
+                    childcard: Customicon(
+                      name: "Age",
+                    ),
+                  ))
                 ],
               ),
             ),
