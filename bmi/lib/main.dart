@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:bmi/resultpage.dart';
 import 'package:flutter/material.dart';
 import 'inputpage.dart';
 
@@ -13,7 +14,10 @@ class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Inputpage()
+      home: Inputpage(),
+      routes: {
+        '/result':(context)=>ResultPage()
+      },
       
       );
   }

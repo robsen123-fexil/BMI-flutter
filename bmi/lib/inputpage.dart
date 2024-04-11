@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, avoid_print, unnecessary_import, unused_element, depend_on_referenced_packages, unused_label, camel_case_types, use_key_in_widget_constructors, use_super_parameters
 
+import 'package:bmi/resultpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -8,7 +9,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'customeicon.dart';
 import 'roundbutton.dart';
 import 'constants.dart';
-import 'resultpage.dart';
+
+import 'buttoncalc.dart';
 
 enum Gender { male, female }
 
@@ -152,7 +154,7 @@ class _InputpageState extends State<Inputpage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                roundbutton(
+                                RoundButton(
                                   icon: FontAwesomeIcons.plus,
                                   onpress: () {
                                     setState(() {
@@ -163,7 +165,7 @@ class _InputpageState extends State<Inputpage> {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                roundbutton(
+                                RoundButton(
                                     icon: FontAwesomeIcons.minus,
                                     onpress: () {
                                       setState(() {
@@ -194,7 +196,7 @@ class _InputpageState extends State<Inputpage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  roundbutton(
+                                  RoundButton(
                                       icon: FontAwesomeIcons.minus,
                                       onpress: () {
                                         setState(() {
@@ -204,7 +206,7 @@ class _InputpageState extends State<Inputpage> {
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  roundbutton(
+                                 RoundButton(
                                       icon: FontAwesomeIcons.plus,
                                       onpress: () {
                                         setState(() {
@@ -218,28 +220,12 @@ class _InputpageState extends State<Inputpage> {
                 ],
               ),
             ),
-            GestureDetector(
-              onTap: () {
+             ButtonCalc(
+              ontap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ResultPage()));
               },
-              child: Container(
-                  width: double.infinity,
-                  height: 60,
-                  margin: EdgeInsets.all(10),
-                  color: Color.fromARGB(255, 30, 27, 27),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Calculate",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 135, 138, 150),
-                            fontSize: 40,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  )),
+              type: "Calculate ",
             )
           ],
         ));
