@@ -29,10 +29,10 @@ class _InputpageState extends State<Inputpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 247, 244, 244),
+        backgroundColor: Color.fromARGB(255, 11, 7, 49),
         appBar: AppBar(
-            title: const Text(
-              "BMI calculator",
+            title:  Text(
+              "BMI Gauge", style: style
             ),
             centerTitle: true,
             backgroundColor: Color.fromARGB(255, 8, 36, 59),
@@ -59,7 +59,7 @@ class _InputpageState extends State<Inputpage> {
                                 ? clicked
                                 : notclicked,
                             childcard: Customicon(
-                              name: "Male",
+                              name: "Male" ,
                               icon: FontAwesomeIcons.mars,
                             ),
                           )),
@@ -83,14 +83,13 @@ class _InputpageState extends State<Inputpage> {
             ),
             Expanded(
                 child: Resuable(
-                    colour: Colors.blue,
+                    colour: widgetcolor,
                     childcard: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "Height",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w900, fontSize: 30),
+                          style: style,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -99,12 +98,11 @@ class _InputpageState extends State<Inputpage> {
                           children: [
                             Text(
                               height.toString(),
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.w900),
+                              style: style,
                             ),
                             Text(
                               "cm",
-                              style: TextStyle(fontWeight: FontWeight.w900),
+                              style: TextStyle(color:Colors.white, fontSize: 15),
                             )
                           ],
                         ),
@@ -138,19 +136,17 @@ class _InputpageState extends State<Inputpage> {
                 children: [
                   Expanded(
                     child: Resuable(
-                      colour: Colors.white,
+                      colour: widgetcolor,
                       childcard: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Weight",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w900, fontSize: 30),
+                            style:style,
                           ),
                           Text(
                             weight.toString(),
-                            style: TextStyle(
-                                fontWeight: FontWeight.w900, fontSize: 20),
+                            style: style,
                           ),
                           Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -183,19 +179,17 @@ class _InputpageState extends State<Inputpage> {
                   ),
                   Expanded(
                       child: Resuable(
-                          colour: Colors.brown,
+                          colour: widgetcolor,
                           childcard: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 "AGE",
-                                style: TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.w900),
+                                style:style,
                               ),
                               Text(
                                 age.toString(),
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w900, fontSize: 20),
+                                style: style,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,

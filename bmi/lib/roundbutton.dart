@@ -13,18 +13,19 @@ class RoundButton extends StatelessWidget {
     return Column(
       children: [
         FloatingActionButton(
+          
           heroTag: herotag,
           onPressed: onpress,
           // ignore: sort_child_properties_last
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             
-
+        
             children: [
            
-          Icon(icon)],),
-          backgroundColor: Colors.grey,
-
+          Icon(icon, size: 20,)],),
+          backgroundColor: Colors.grey, 
+        
         ),
       ],
     );

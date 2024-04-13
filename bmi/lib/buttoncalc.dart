@@ -15,17 +15,21 @@ class Buttonbutton extends StatelessWidget {
       //   Navigator.pushNamed(context, '/result');
       // },
       child: Container(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(
-            name,
-            style: TextStyle(
-                color: Color.fromARGB(255, 254, 254, 254),
-                fontSize: 30,
-                fontWeight: FontWeight.w800),
-          )
-        ]),
+        
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              name,
+              style: TextStyle(
+                  color: Color.fromARGB(255, 254, 254, 254),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w800),
+            ),
+          ],
+        ),
         width: double.infinity,
-        height: 100,
+        height: 60,
         margin: const EdgeInsets.only(
           top: 30,
           left: 30,
