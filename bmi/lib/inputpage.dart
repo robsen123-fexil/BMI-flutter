@@ -9,7 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'customeicon.dart';
 import 'roundbutton.dart';
 import 'constants.dart';
-
+import 'calculation.dart';
 import 'buttoncalc.dart';
 
 enum Gender { male, female }
@@ -31,16 +31,14 @@ class _InputpageState extends State<Inputpage> {
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 21, 15, 15),
         appBar: AppBar(
-          title: const Text(
-            "BMI calculator",
-          ),
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 8, 36, 59),
-          iconTheme: IconThemeData(
+            title: const Text(
+              "BMI calculator",
+            ),
+            centerTitle: true,
+            backgroundColor: Color.fromARGB(255, 8, 36, 59),
+            iconTheme: IconThemeData(
               color: Colors.white,
-            )
-        ),
-
+            )),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -203,7 +201,7 @@ class _InputpageState extends State<Inputpage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   RoundButton(
-                                     herotag:"hello3" ,
+                                      herotag: "hello3",
                                       icon: FontAwesomeIcons.minus,
                                       onpress: () {
                                         setState(() {
@@ -230,12 +228,8 @@ class _InputpageState extends State<Inputpage> {
             ),
             Buttonbutton(
               ontap: () {
-
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ResultPage(
-                            )));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ResultPage()));
               },
               name: "Calculate",
             ),
