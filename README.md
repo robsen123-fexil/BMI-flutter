@@ -1,2 +1,2 @@
-# BMI-gauge
-measures BMI 
+# BMI-flutter
+body-mass-index
