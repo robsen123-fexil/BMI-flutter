@@ -228,8 +228,13 @@ class _InputpageState extends State<Inputpage> {
             ),
             Buttonbutton(
               ontap: () {
+                Calculation calc = Calculation(weigth: weight, heigth: height);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ResultPage()));
+                    MaterialPageRoute(builder: (context) => ResultPage(
+                      bmi: calc.getbmi(),
+                      result:calc.getResult(),
+                      suggestion: calc.getSuggestion(),
+                    )));
               },
               name: "Calculate",
             ),

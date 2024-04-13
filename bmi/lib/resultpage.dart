@@ -5,7 +5,10 @@ import 'buttoncalc.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({super.key});
+  const ResultPage({super.key, this.bmi, this.result, this.suggestion});
+  final String? bmi;
+  final String? result;
+  final String? suggestion;
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +47,13 @@ class ResultPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Normal", textAlign: TextAlign.center, style: TextStyle(color:Color.fromARGB(255, 255, 255, 255)),),
-                          Text("22", textAlign: TextAlign.center,style: TextStyle(color:Colors.white, fontWeight: FontWeight.w900, fontSize: 30),),
+                          Text(
+                            result ! , textAlign: TextAlign.center, style: TextStyle(color:Color.fromARGB(255, 255, 255, 255)),),
+                          Text(bmi!, textAlign: TextAlign.center,style: TextStyle(color:Colors.white, fontWeight: FontWeight.w900, fontSize: 30),),
                           SizedBox(
                             height: 30,
                           ),
-                          Text(" Keep Going you are doing Great!!!", textAlign: TextAlign.end, style: TextStyle(color:Colors.white, backgroundColor: Colors.green, fontWeight: FontWeight.w900, fontSize: 20),),
+                          Text(suggestion!, textAlign: TextAlign.end, style: TextStyle(color:Colors.white, backgroundColor: Colors.green, fontWeight: FontWeight.w900, fontSize: 20),),
                           
                         ],
                       ),
