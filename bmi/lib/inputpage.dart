@@ -29,7 +29,7 @@ class _InputpageState extends State<Inputpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 21, 15, 15),
+        backgroundColor: Color.fromARGB(255, 247, 244, 244),
         appBar: AppBar(
             title: const Text(
               "BMI calculator",
