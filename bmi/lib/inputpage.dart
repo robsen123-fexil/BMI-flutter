@@ -36,7 +36,11 @@ class _InputpageState extends State<Inputpage> {
           ),
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 8, 36, 59),
+          iconTheme: IconThemeData(
+              color: Colors.white,
+            )
         ),
+
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -155,6 +159,7 @@ class _InputpageState extends State<Inputpage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 RoundButton(
+                                  herotag: "hello2",
                                   icon: FontAwesomeIcons.plus,
                                   onpress: () {
                                     setState(() {
@@ -166,6 +171,7 @@ class _InputpageState extends State<Inputpage> {
                                   width: 10,
                                 ),
                                 RoundButton(
+                                    herotag: "hello1",
                                     icon: FontAwesomeIcons.minus,
                                     onpress: () {
                                       setState(() {
@@ -197,6 +203,7 @@ class _InputpageState extends State<Inputpage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   RoundButton(
+                                     herotag:"hello3" ,
                                       icon: FontAwesomeIcons.minus,
                                       onpress: () {
                                         setState(() {
@@ -206,7 +213,8 @@ class _InputpageState extends State<Inputpage> {
                                   SizedBox(
                                     width: 10,
                                   ),
-                                 RoundButton(
+                                  RoundButton(
+                                      herotag: "hello4",
                                       icon: FontAwesomeIcons.plus,
                                       onpress: () {
                                         setState(() {
@@ -220,13 +228,17 @@ class _InputpageState extends State<Inputpage> {
                 ],
               ),
             ),
-             ButtonCalc(
+            Buttonbutton(
               ontap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ResultPage()));
+
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ResultPage(
+                            )));
               },
-              type: "Calculate ",
-            )
+              name: "Calculate",
+            ),
           ],
         ));
   }

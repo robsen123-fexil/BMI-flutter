@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Resuable extends StatelessWidget {
-  const Resuable({super.key, required this.childcard, this.icon, required this.colour});
+  const Resuable( {super.key, required this.childcard, this.icon, required this.colour});
   final IconData? icon;
   final Color colour;
   final Widget childcard;
@@ -13,7 +13,7 @@ class Resuable extends StatelessWidget {
         decoration: BoxDecoration(
         
 
-            borderRadius: BorderRadius.circular(10), color: colour),
+            borderRadius: BorderRadius.circular(20), color: colour),
         child: childcard);
   }
 }
